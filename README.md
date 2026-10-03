@@ -62,8 +62,32 @@ python scripts/summarize_locked_results.py
 python scripts/plot_locked_results.py
 ```
 
-All generated summaries, metrics, and plots are written below `results/`, which
-is intentionally excluded from Git.
+### Figures 3 and 4: severity and unimodal experiments
+
+The severity curves in Figure 3 and the unimodal baselines in Figure 4 require
+the extended evaluation. Run it independently on each reported test fold, then
+aggregate the results and create the figures:
+
+```bash
+python scripts/run_extended_evaluation.py --outer-fold 1
+python scripts/run_extended_evaluation.py --outer-fold 2
+python scripts/run_extended_evaluation.py --outer-fold 3
+python scripts/run_extended_evaluation.py --outer-fold 4
+python scripts/summarize_extended_results.py
+python scripts/plot_extended_results.py
+```
+
+The plotting script writes both PDF and PNG versions:
+
+- Figure 3: `paper/figures/severity_curves.pdf` and `.png`
+- Figure 4: `paper/figures/unimodal_baselines.pdf` and `.png`
+
+It also produces the supplementary `ablation_unimodal` and
+`ablation_components` figures in the same directory.
+
+Intermediate summaries and metrics are written below `results/`; publication
+figures are written below `paper/figures/`. Both generated directories are
+intentionally excluded from Git.
 
 ## Implemented methods
 
