@@ -1,0 +1,29 @@
+{
+  "seed": 2027,
+  "modalities": [
+    "phone_acc",
+    "phone_gyro",
+    "phone_magnet",
+    "watch_acc",
+    "location",
+    "audio"
+  ],
+  "labels": [
+    "label:SITTING",
+    "label:LYING_DOWN",
+    "label:OR_standing",
+    "label:FIX_walking",
+    "label:BICYCLING",
+    "label:IN_A_CAR",
+    "label:TALKING",
+    "label:OR_outside"
+  ],
+  "outer_fold": 0,
+  "validation_fold": 1,
+  "model": {
+    "alpha": 0.0001,
+    "max_iter": 1000,
+    "tolerance": 0.001
+  }
+}
+

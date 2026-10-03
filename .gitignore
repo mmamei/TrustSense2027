@@ -1,0 +1,28 @@
+# Data and generated artifacts
+data/raw/
+data/processed/
+results/
+output/
+tmp/
+
+# Manuscript sources and generated figures are maintained separately
+paper/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+.coverage
+
+# LaTeX
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
